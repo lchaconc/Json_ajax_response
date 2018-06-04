@@ -33,6 +33,6 @@ function consultar() {
       $("#visor").html(resp);
     })
     .always(function(){
-      console.log("complete");
+      console.log("completado");
   });
 }
