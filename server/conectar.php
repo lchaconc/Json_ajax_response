@@ -4,7 +4,7 @@ function conectarDB(){
         $servidor = 'localhost';
         $usuario = 'root';
         $password = '';
-        $bd = 'Productos';
+        $bd = 'db_json1';
 
     $conexion = mysqli_connect($servidor, $usuario, $password,$bd);
 

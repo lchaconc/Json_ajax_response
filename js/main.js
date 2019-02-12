@@ -5,7 +5,13 @@ $(document).ready(function () {
   $("#btnConsultar").click(function () {
 
       consultar();
-    })
+    });
+
+    $("#btnGetJson").click(function (e) { 
+      e.preventDefault();
+      
+      getJson(  $("#txtIdUsuario").val()  );
+    });
 })
 
 function consultar() {
@@ -35,4 +41,16 @@ function consultar() {
     .always(function(){
       console.log("completado");
   });
+}
+
+
+
+function getJson(idUsuario) {
+  $.getJSON("server/obtener_json.php?id_usr="+idUsuario , 
+    function (data, textStatus, jqXHR) {
+      console.log(data);;
+      
+    }
+  );
+  
 }

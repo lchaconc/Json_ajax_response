@@ -1,11 +1,13 @@
 <?php
 
-$tabla =$_POST['ajaxProducto'];
 
-  //echo $tabla;
+$idUsr = $_GET['id_usr'];
+$tabla = "avance";
+
+  //echo $idUsr;
 
 
-$sql = "SELECT * FROM $tabla";
+$sql = "SELECT * FROM $tabla WHERE id_usuario =  '".$idUsr."'" ;
 include "conectar.php";
 function desconectar($conexion){
 
@@ -14,8 +16,7 @@ function desconectar($conexion){
         if($close){
             //echo '';
         }else{
-            echo 'Ha sucedido un error inexperado en la desconexion de la base de datos
-';
+            echo 'Ha sucedido un error inexperado en la desconexion de la base de datos';
         }
 
     return $close;
