@@ -8,40 +8,45 @@
 		<script src="js/main.js"></script>
   </head>
   <body>
-    <br>
-    <div class="continer">
-		<div class="row">
-		<div class="col-sm-3 offset-sm-5">
-		<form>	
-			<div class="form-group">
-				<select class="form-control" id="cmbProducto">
-					<option value="">Seleccione el producto</option>
-					<option value="frutas">Frutas</option>
-					<option value="verduras">Verduras</option>
-				</select>
-			</div>
-		<input type="button" class="btn btn-primary" id="btnConsultar" value="Consultar" >
-		</form> 		        
-		</div>
-		</div>
-		<br>
-		<hr>
 
-		<div class="row">
-			<div class="col-6 text-right" >
-				<input type="text" class="form-contrl" id="txtIdUsuario" > 
-			</div>
-			<div class="col-6">
-				<button id="btnGetJson" class="btn btn-warning"> Obtener json </button>
-			</div>
+			<div class="jumbotron text-center">
+					<h2>Prueba Json</h2>
+				</div>
+
+		<div class="container">
+		
+				
+			
+					<div class="row">
+						<div class="col-2 text-right" >
+							<input type="text" class="form-control" id="txtIdUsuario" > 
+						</div>
+						<div class="col-4">
+							<button id="btnGetJson" class="btn btn-warning"> Obtener json </button>
+						</div>
+			
+						<div class="col-2">
+								<input type="number" class="form-control" id="txtIdCancion" min="1" placeholder="Id de la canción"> 
+						</div>
+						<div class="col-2">
+								<input type="number" class="form-control" id="txtAvance" min="1" placeholder="Avance: 1 - 5" > 
+						</div>
+						<div class="col-2">
+								<button id="btnUpdateJson" class="btn btn-success"> Actualizar</button>
+						</div>
+			
+			
+			
+					</div>
+					<hr>
+			
+					<div class="row">
+						<div class="col-12" id="visor" ></div>
+					</div>
+			
+			
+					</div>
 		</div>
-
-		<div class="row">
-			<div class="col-12" id="visor" ></div>
-		</div>
-
-
-    </div>
 
   </body>
 </html>
